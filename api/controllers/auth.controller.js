@@ -3,6 +3,7 @@ import errorHandler from '../utils/error.js';
 import bcryptjs from 'bcryptjs';
 export const signup = 
 async(req, res, next)=>{
+    
     const {username, email, password}= req.body;
 
     if(!username||!email||!password||username===''||email===''||password==='')
@@ -20,5 +21,6 @@ async(req, res, next)=>{
     }
     catch(error){
         next(error);
-    }
+    } 
+    
 };
